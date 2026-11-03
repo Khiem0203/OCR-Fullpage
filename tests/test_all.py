@@ -1001,12 +1001,12 @@ class Config(unittest.TestCase):
             self.assertNotIn(needle, src)
 
     def test_vintern_is_gone(self):
-        for path in list(Path(ROOT / "app").rglob("*.py")) + [ROOT / ".env.example", ROOT / "requirements.txt"]:
+        for path in list(Path(ROOT / "app").rglob("*.py")) + [ROOT / ".env", ROOT / "requirements.txt"]:
             self.assertNotIn("vintern", path.read_text(encoding="utf-8").lower(), path.name)
         self.assertFalse((ROOT / "service" / "vllm-vintern.service").exists())
 
     def test_qwen_and_the_qldd_flows_are_gone(self):
-        files = list(Path(ROOT / "app").rglob("*.py")) + [ROOT / n for n in (".env.example", "requirements.txt", "start-service.sh")]
+        files = list(Path(ROOT / "app").rglob("*.py")) + [ROOT / n for n in (".env", "requirements.txt", "start-service.sh")]
         for path in files:
             text = path.read_text(encoding="utf-8").lower()
             for stale in ("qwen", "qldd", "detectron", "phieutin", "tasks_new"):
