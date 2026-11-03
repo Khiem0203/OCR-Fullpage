@@ -251,7 +251,7 @@ Cần RabbitMQ, PostgreSQL, Chandra (vLLM) và ProtonX chạy sẵn (hoặc đ�
 ```bash
 python -m venv .venv && .venv/bin/pip install -r requirements.txt
 sudo apt install antiword catdoc libreoffice-writer-nogui   # đọc .doc / .odt / .rtf
-cp .env.example .env     # điền API_KEYS, CELERY_BROKER_URL, CELERY_RESULT_BACKEND, POSTGRES_*; sửa CHANDRA_URL, SPELLFIX_API_URL
+# Sửa .env: điền API_KEYS, CELERY_BROKER_URL, CELERY_RESULT_BACKEND, POSTGRES_*; sửa CHANDRA_URL, SPELLFIX_API_URL
 python -c "import secrets; print(secrets.token_urlsafe(32))"   # dùng để tạo khóa/mật khẩu (an toàn cho URL)
 VENV_BIN=$PWD/.venv/bin ./start-service.sh
 # ProtonX trong cùng venv: .venv/bin/pip install -r requirements-spellfix.txt, rồi START_SPELLFIX=true (nghe 127.0.0.1:8006)
