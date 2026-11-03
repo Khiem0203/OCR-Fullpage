@@ -1,0 +1,1 @@
+"""OCR toàn trang."""
