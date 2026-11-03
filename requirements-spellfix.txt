@@ -1,0 +1,6 @@
+# Thư viện cho service ProtonX; cài torch đúng bản CUDA trước
+fastapi==0.115.11
+uvicorn==0.34.0
+python-dotenv==1.1.0
+torch>=2.4
+transformers>=4.46
