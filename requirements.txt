@@ -1,0 +1,15 @@
+# Đọc .doc cần antiword hoặc catdoc; .odt/.rtf cần LibreOffice: sudo apt install antiword catdoc libreoffice-writer-nogui
+fastapi==0.115.11
+uvicorn==0.34.0
+httpx==0.28.1
+python-multipart==0.0.20
+pymupdf==1.25.5
+pillow==10.2.0
+python-docx==1.1.2
+numpy==1.26.4
+celery==5.5.3
+kombu==5.5.4
+boto3==1.38.27
+psycopg2-binary==2.9.10
+SQLAlchemy==2.0.41
+flower==2.0.1
